@@ -25,6 +25,6 @@ public class CalculatorTest {
     @Test
     public void testSubtraction() {
         double subtraction = Calculator.subtraction(10, 5);
-        assertEquals(subtraction, 0, MIN_VALUE);
+        assertEquals(subtraction, 5, MIN_VALUE);
     }
 }
