@@ -1,5 +1,10 @@
 language: java
 sudo: false
-script: mvn test
 script: mvn install
-
+deploy:
+  provider: releases
+  api_key:
+    secure: mtlwaNhH/WAZatdCEo4Co04TgIsV94U9q8QzeDAzVtWUbUYsHHC17fXyRqRbzocATV6cL/PMH/mhiYanJ1B0LuheukiNndtAnu52cUfs1EOaW2AxivHrKVUwf2XhVEKUpsl8+meeeN9RlZrEe1VtzF9hW0gQ/g0jeL4XAwpGPN5PYYXTlUMO5ieIg1d4AYEI/3+00Ztg4hVK/frYlvXjwrm20gc8kvmAhcXMOVADjJVa9i2z+CXviZ8DjEAZ+z9SkQp8E2NMQ2RsifW/bO9/EUh6TG+x1rw97EOyqY4kYtZAebakv6l6m2W7pRG7SAXDdBtk9njmyprXAy/1Utv1cfdgY4vkHGaKR/3anUAFlosDidytEmSrq5G3QsiLOZvVkKIJzgy+GpY22MmROaHrUVh9u1ts73mP+peD7SI1TUo0g/Em93yphcsO1hmHN1bMniHmnUjaH5ZjMEKfnQiqQ9Cy3xUL38bXp7lrnO1pZI46Wjco+aM6udCY9tRU86e7ZiaTVzU+seV2C6HJZrt2fXzDHhyrWFEWPor1pBYJ0hLWuoV2UlKdIok/wiqYAsV1QT+Y56LCdAOkQuIxqTiPWae3Fhb7B2kBKlETrRpdOwjzxqVX58DveM55/gxvXlOG0JifLbmXPAipeYmWWFyINroLerD9z5VDkRGlSASYXk0=
+  file: "/home/travis/.m2/repository/Calculator/Calculator/1.0-SNAPSHOT/Calculator-1.0-SNAPSHOT.jar"
+  on:
+    repo: TheOddPanda/Calculator
